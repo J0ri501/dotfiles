@@ -1,0 +1,18 @@
+# small configurations
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Aliases
+# Bat: alias to search files with bat and open in Neovim
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+# Custom eza(better ls)
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+#shutdown or reboot
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
