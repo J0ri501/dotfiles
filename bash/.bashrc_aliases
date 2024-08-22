@@ -3,8 +3,10 @@
 eval "$(fzf --bash)"
 
 # Aliases
+alias tmc='emacs -nw'
 # Bat: alias to search files with bat and open in Neovim
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias emv='tmc $(fzf -m --preview="bat --color=always {}")'
 # Custom eza(better ls)
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
