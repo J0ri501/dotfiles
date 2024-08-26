@@ -63,10 +63,16 @@
 
 ;; Org Roam config
 
-
 (after! org
-  (setq org-roam-directory "~/Org/roam/"
-        org-roam-graph-viewer "/usr/bin/brave-browser"))
+  (setq org-roam-directory "~/Org/roam/")
+  (setq org-roam-graph-viewer
+        (cond
+         ((file-exists-p "/usr/bin/brave") "/usr/bin/brave")
+         ((file-exists-p "/usr/bin/brave-browser") "/usr/bin/brave-browser")
+         (t "/usr/bin/brave")))  ; Valor por defecto si ninguno de los anteriores existe
+)
+
+
 
 (map! :leader
       (:prefix ("n r" . "org-roam")
