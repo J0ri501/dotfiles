@@ -40,7 +40,54 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+;;(setq org-directory "~/org/")
+
+
+(after! org
+  (setq org-directory "~/Org/"
+        org-default-notes-file (expand-file-name "notes.org" org-directory)
+        org-ellipsis " ▼ "
+        org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
+        org-superstar-itembullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
+        org-log-done 'time
+        org-hide-emphasis-markers t
+        ;; ex. of org-link-abbrev-alist in action
+        ;; [[arch-wiki:Name_of_Page][Description]]
+        org-link-abbrev-alist    ; This overwrites the default Doom org-link-abbrev-list
+          '(("google" . "http://www.google.com/search?q=")
+            ("arch-wiki" . "https://wiki.archlinux.org/index.php/")
+            ("ddg" . "https://duckduckgo.com/?q=")
+            ("wiki" . "https://en.wikipedia.org/wiki/"))))
+(after! org
+  (setq org-agenda-files '("~/Org/agenda.org")))
+
+;; Org Roam config
+
+
+(after! org
+  (setq org-roam-directory "~/Org/roam/"
+        org-roam-graph-viewer "/usr/bin/brave-browser"))
+
+(map! :leader
+      (:prefix ("n r" . "org-roam")
+       :desc "Completion at point" "c" #'completion-at-point
+       :desc "Find node"           "f" #'org-roam-node-find
+       :desc "Show graph"          "g" #'org-roam-graph
+       :desc "Insert node"         "i" #'org-roam-node-insert
+       :desc "Capture to node"     "n" #'org-roam-capture
+       :desc "Toggle roam buffer"  "r" #'org-roam-buffer-toggle))
+
+(map! :leader
+      :desc "Switch to perspective NAME"       "DEL" #'persp-switch
+      :desc "Switch to buffer in perspective"  "," #'persp-switch-to-buffer
+      :desc "Switch to next perspective"       "]" #'persp-next
+      :desc "Switch to previous perspective"   "[" #'persp-prev
+      :desc "Add a buffer current perspective" "+" #'persp-add-buffer
+      :desc "Remove perspective by name"       "-" #'persp-remove-by-name)
+
+
+;;
+
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
