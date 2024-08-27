@@ -18,7 +18,7 @@ exec --no-startup-id picom
 # polybar script to fix polybar on multiple screens
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 # feh - wallpaper
-exec_always feh --bg-scale ~/Pictures/backgrounds/nice-blue-background.png
+exec_always feh --bg-scale ~/Pictures/backgrounds/wallpaper_purple.png
 
 # i3lock with background image(-i)
 bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/Pictures/backgrounds/nice-blue-background.png
