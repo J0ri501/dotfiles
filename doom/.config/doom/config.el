@@ -44,7 +44,7 @@
 
 
 (after! org
-  (setq org-directory "~/nt/Org/"
+  (setq org-directory "~/sdocs/Org/"
         org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
@@ -59,12 +59,12 @@
             ("ddg" . "https://duckduckgo.com/?q=")
             ("wiki" . "https://en.wikipedia.org/wiki/"))))
 (after! org
-  (setq org-agenda-files '("~/Org/agenda2024.org")))
+  (setq org-agenda-files '("~/sdocs/Org/agenda2024.org")))
 
 ;; Org Roam config
 
 (after! org
-  (setq org-roam-directory "~/nt/Org/RoamNotes/")
+  (setq org-roam-directory "~/sdocs/Org/RoamNotes/")
   (setq org-roam-graph-viewer
         (cond
          ((file-exists-p "/usr/bin/brave") "/usr/bin/brave")
