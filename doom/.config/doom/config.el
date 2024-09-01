@@ -91,6 +91,8 @@
       :desc "Add a buffer current perspective" "+" #'persp-add-buffer
       :desc "Remove perspective by name"       "-" #'persp-remove-by-name)
 
+(after! org
+  (require 'org-habit))
 
 ;; org-roam-ui
 
