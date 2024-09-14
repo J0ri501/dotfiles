@@ -14,7 +14,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-          ensure_installed = { "lua_ls","clangd","pyright","jdtls","tsserver","html","cssls","rust_analyzer"}
+          ensure_installed = { "lua_ls","clangd","pyright","jdtls","ts_ls","html","cssls","rust_analyzer"}
         })
       end
   },
@@ -36,7 +36,7 @@ return {
       lspconfig.jdtls.setup({
         capabilities = capabilities
       })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
       lspconfig.html.setup({
