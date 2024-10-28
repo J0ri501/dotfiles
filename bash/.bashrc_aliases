@@ -1,7 +1,10 @@
-# small configurations
+#shrc_aliases                                                                                            
+#small configurations
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
+# Nix
+export NIX_PATH=/nix/var/nix/profiles/per-user/$USER/channels:$NIX_PATH
 
 # -------------
 # Aliases
