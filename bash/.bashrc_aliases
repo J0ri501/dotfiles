@@ -12,6 +12,7 @@ alias tmc='emacs -nw'
 # Bat: alias to search files with bat and open in Neovim
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias emv='tmc $(fzf -m --preview="bat --color=always {}")'
+alias cdf='cd $(find . -type d | fzf)'
 
 alias doom='~/.config/emacs/bin/doom'
 
