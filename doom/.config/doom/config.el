@@ -64,7 +64,7 @@
 ;; Org Roam config
 
 (after! org
-  (setq org-roam-directory "~/sdocs/Org/RoamNotes/")
+  (setq org-roam-directory "~/tt2")
   (setq org-roam-graph-viewer
         (cond
          ((file-exists-p "/usr/bin/brave") "/usr/bin/brave")
@@ -97,6 +97,7 @@
 ;; org-roam-ui
 
 
+
 (use-package! websocket
     :after org-roam)
 
@@ -111,7 +112,6 @@
           org-roam-ui-follow t
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
-
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an

@@ -13,9 +13,9 @@ return {
       --auto_install = true,
     },
     config = function()
-      require("mason-lspconfig").setup({
+      require("mason").setup({
           ensure_installed = { "lua_ls","gopls","clangd","pyright","jdtls","ts_ls","html","cssls","rust_analyzer"}
-        })
+      })
       end
   },
   {
