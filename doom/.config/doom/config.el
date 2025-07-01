@@ -59,12 +59,15 @@
             ("ddg" . "https://duckduckgo.com/?q=")
             ("wiki" . "https://en.wikipedia.org/wiki/"))))
 (after! org
-  (setq org-agenda-files '("~/sdocs/Org/agenda2024.org")))
+  (setq org-agenda-files '("~/sdocs/Org/agenda2025.org"
+                           "~/sdocs/Org/tasks2025.org"
+                           "~/sdocs/Org/notes2025.org"
+                           )))
 
 ;; Org Roam config
 
 (after! org
-  (setq org-roam-directory "~/tt2")
+  (setq org-roam-directory "~/sdocs/Org/RoamNotes/")
   (setq org-roam-graph-viewer
         (cond
          ((file-exists-p "/usr/bin/brave") "/usr/bin/brave")
