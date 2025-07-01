@@ -1,0 +1,24 @@
+# -------------
+# Aliases
+alias tmc='emacs -nw'
+# Bat: alias to search files with bat and open in Neovim
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias emv='tmc $(fzf -m --preview="bat --color=always {}")'
+alias cdf='cd $(find . -type d | fzf)'
+
+alias doom='~/.config/emacs/bin/doom'
+
+alias syncth='~/Documents/syncthing/./syncthing'
+
+# Custom eza(better ls)
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+#shutdown or reboot
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
+
