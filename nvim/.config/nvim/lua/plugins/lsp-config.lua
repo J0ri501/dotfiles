@@ -1,10 +1,10 @@
 return {
   {
-  "williamboman/mason.nvim",
-  lazy = false,
-  config = function()
-    require("mason").setup()
-  end,
+    "williamboman/mason.nvim",
+    lazy = false,
+    config = function()
+      require("mason").setup()
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -23,33 +23,45 @@ return {
     lazy = false,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      local lspconfig = require("lspconfig")
-      lspconfig.gopls.setup({
-        capabilities = capabilities
+
+      vim.lsp.config('gopls', {
+        capabilities = capabilities,
       })
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
+      vim.lsp.config('lua_ls', {
+        capabilities = capabilities,
       })
-     lspconfig.clangd.setup({
-        capabilities = capabilities
+      vim.lsp.config('clangd', {
+        capabilities = capabilities,
       })
-      lspconfig.pyright.setup({
-        capabilities = capabilities
+      vim.lsp.config('pyright', {
+        capabilities = capabilities,
       })
-      lspconfig.jdtls.setup({
-        capabilities = capabilities
+      vim.lsp.config('jdtls', {
+        capabilities = capabilities,
       })
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities
+      vim.lsp.config('ts_ls', {
+        capabilities = capabilities,
       })
-      lspconfig.html.setup({
-        capabilities = capabilities
+      vim.lsp.config('html', {
+        capabilities = capabilities,
       })
-      lspconfig.cssls.setup({
-        capabilities = capabilities
+      vim.lsp.config('cssls', {
+        capabilities = capabilities,
       })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities
+      vim.lsp.config('rust_analyzer', {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.enable({
+        'gopls',
+        'lua_ls',
+        'clangd',
+        'pyright',
+        'jdtls',
+        'ts_ls',
+        'html',
+        'cssls',
+        'rust_analyzer',
       })
 
       vim.keymap.set('n','K', vim.lsp.buf.hover, {})
