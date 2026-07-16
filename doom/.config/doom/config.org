@@ -1,7 +1,23 @@
+#+title: Configuración Doom Emacs
+#+author: joris
+
+* Índice
+- [[*Apariencia][Apariencia]]
+- [[*Org][Org]]
+- [[*Org Roam][Org Roam]]
+- [[*Atajos][Atajos]]
+- [[*Org Roam UI][Org Roam UI]]
+- [[*RSS / elfeed][RSS / elfeed]]
+
+* Apariencia
+#+begin_src emacs-lisp
 (setq doom-theme 'doom-one)
 (setq display-line-numbers-type t)
 (setq org-return-follows-link t)
+#+end_src
 
+* Org
+#+begin_src emacs-lisp
 (add-hook 'org-mode-hook #'org-superstar-mode)
 (add-hook 'org-mode-hook #'org-appear-mode)
 
@@ -26,7 +42,10 @@
 
 (after! org
   (require 'org-habit))
+#+end_src
 
+* Org Roam
+#+begin_src emacs-lisp
 (after! org
   (setq org-roam-directory "~/sdocs/Org/RoamNotes/")
   (setq org-roam-graph-viewer
@@ -34,7 +53,11 @@
          ((file-exists-p "/usr/bin/brave") "/usr/bin/brave")
          ((file-exists-p "/usr/bin/brave-browser") "/usr/bin/brave-browser")
          (t "/usr/bin/brave"))))
+#+end_src
 
+* Atajos
+** Org-roam
+#+begin_src emacs-lisp
 (map! :leader
       (:prefix ("n r" . "org-roam")
        :desc "Completion at point" "c" #'completion-at-point
@@ -43,7 +66,10 @@
        :desc "Insert node"         "i" #'org-roam-node-insert
        :desc "Capture to node"     "n" #'org-roam-capture
        :desc "Toggle roam buffer"  "r" #'org-roam-buffer-toggle))
+#+end_src
 
+** Perspectivas
+#+begin_src emacs-lisp
 (map! :leader
       :desc "Switch to perspective NAME"       "DEL" #'persp-switch
       :desc "Switch to buffer in perspective"  "," #'persp-switch-to-buffer
@@ -51,7 +77,10 @@
       :desc "Switch to previous perspective"   "[" #'persp-prev
       :desc "Add a buffer current perspective" "+" #'persp-add-buffer
       :desc "Remove perspective by name"       "-" #'persp-remove-by-name)
+#+end_src
 
+* Org Roam UI
+#+begin_src emacs-lisp
 (use-package! websocket
     :after org-roam)
 
@@ -62,7 +91,10 @@
           org-roam-ui-follow t
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
+#+end_src
 
+* RSS / elfeed
+#+begin_src emacs-lisp
 ;;(setq elfeed-feeds (quote
 ;;                    (("https://www.reddit.com/r/linux.rss" reddit linux)
 ;;                     ("https://www.hackaday.com/blog/feed/" hackaday linux))))
@@ -108,6 +140,14 @@
   :config
   (setq elfeed-goodies/entry-pane-size 0.5))
 
+#+end_src
+
+* ERADIO
+an online radio player for emacs
+
+
+#+begin_src emacs-lisp
+
 (use-package eradio
   :init
   (setq eradio-player '("mpv" "--no-video" "--no-terminal"))
@@ -118,3 +158,5 @@
                           ("FluxFM ChillHop 128" . "https://streams.fluxfm.de/Chillhop/mp3-128/streams.fluxfm.de/play.pls")
                           ("Illinois Street Lounge" . "https://somafm.com/illstreet130.pls")
                           ("ThistleRadio Celtic" . "https://somafm.com/thistle130.pls"))))
+
+#+end_src

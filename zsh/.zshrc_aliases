@@ -27,3 +27,9 @@ alias lutris="flatpak run net.lutris.Lutris &> /dev/null & disown"
 alias flatseal="flatpak run com.github.tchx84.Flatseal &> /dev/null & disown"
 alias firestorm="flatpak run org.firestormviewer.FirestormViewer &> /dev/null & disown"
 alias musicbrainz="flatpak run org.musicbrainz.Picard &> /dev/null & disown"
+alias rnote="flatpak run com.github.flxzt.rnote &> /dev/null & disown"
+alias krita="flatpak run org.kde.krita &> /dev/null & disown"
+alias kicad="flatpak run org.kicad.KiCad &> /dev/null & disown"
+#other programs
+alias zotero="~/apps/zotero/./zotero &> /dev/null & disown"
+
