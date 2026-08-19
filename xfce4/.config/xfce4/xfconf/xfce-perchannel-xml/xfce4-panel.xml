@@ -94,6 +94,9 @@
         <value type="string" value="wi-fi network connection “infinitum4441” active: infinitum4441 (59%)"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="tray-icon tray app"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="obs"/>
         <value type="string" value="steam"/>
         <value type="string" value="blueman"/>
         <value type="string" value="chrome_status_icon_1"/>
@@ -114,7 +117,7 @@
     <property name="plugin-11" type="string" value="battery"/>
     <property name="plugin-12" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Chromium;firefox-esr;librewolf;OPPO A38"/>
+      <property name="known-players" type="string" value="Chromium;firefox-esr;librewolf;OPPO A38;vlc"/>
     </property>
     <property name="plugin-13" type="string" value="separator"/>
   </property>
