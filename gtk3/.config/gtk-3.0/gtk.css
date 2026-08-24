@@ -1,9 +1,9 @@
-.xfce4-panel {
+/*.xfce4-panel {
    border-bottom-left-radius: 13px;
    border-bottom-right-radius: 13px;
    border-top-left-radius: 13px;
    border-top-right-radius: 13px;
-}
+}*/
  
 .xfce4-panel .tasklist .toggle :checked {
   border-radius: 10px;
