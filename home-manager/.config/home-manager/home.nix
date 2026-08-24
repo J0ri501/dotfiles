@@ -7,12 +7,13 @@
 
   # Versión de estado - NO cambiar
   home.stateVersion = "25.11";
-
+  programs.home-manager.enable = true;
   # Paquetes a instalar
   # Para agregar más, solo agregalos a esta lista:
   #   pkgs.nombre-del-paquete
   #
   # Buscar paquetes: https://search.nixos.org/packages
+
   home.packages = with pkgs; [
     # Editor de texto
     emacs
