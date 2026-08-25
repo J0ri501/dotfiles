@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     zsh
     kitty
-    jetbrains-mono-nerd-fonts
+    nerd-fonts.jetbrains-mono
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete
