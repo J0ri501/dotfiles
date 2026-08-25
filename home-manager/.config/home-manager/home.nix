@@ -7,6 +7,7 @@
 
   # Versión de estado - NO cambiar
   home.stateVersion = "25.11";
+  #enable home-manager
   programs.home-manager.enable = true;
   # Paquetes a instalar
   # Para agregar más, solo agregalos a esta lista:
@@ -27,8 +28,6 @@
     # VISUAL = "emacs";
   };
 
-  # Habilitar home-manager
-  programs.home-manager.enable = true;
 }
 
 #--
