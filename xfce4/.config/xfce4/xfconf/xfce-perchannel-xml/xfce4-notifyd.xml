@@ -7,6 +7,7 @@
       <value type="string" value="blueman"/>
       <value type="string" value="calibre"/>
       <value type="string" value="com.discordapp.Discord"/>
+      <value type="string" value="flameshot"/>
       <value type="string" value="librewolf"/>
       <value type="string" value="notify-send"/>
       <value type="string" value="org.freedesktop.network-manager-applet"/>

@@ -30,6 +30,7 @@ alias musicbrainz="flatpak run org.musicbrainz.Picard &> /dev/null & disown"
 alias rnote="flatpak run com.github.flxzt.rnote &> /dev/null & disown"
 alias krita="flatpak run org.kde.krita &> /dev/null & disown"
 alias kicad="flatpak run org.kicad.KiCad &> /dev/null & disown"
+alias telegram="flatpak run org.telegram.desktop &> /dev/null & disown"
 #other programs
 alias zotero="~/apps/zotero/./zotero &> /dev/null & disown"
 
