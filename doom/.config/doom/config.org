@@ -36,9 +36,9 @@
             ("wiki" . "https://en.wikipedia.org/wiki/"))))
 
 (after! org
-  (setq org-agenda-files '("~/sdocs/Org/agenda2026.org"
-                           "~/sdocs/Org/tasks2026.org"
-                           "~/sdocs/Org/notes2026.org")))
+  (setq org-agenda-files '("~/sdocs/Org/agenda2026.org")
+        org-agenda-skip-scheduled-if-done t
+        org-agenda-skip-deadline-if-done t))
 
 (after! org
   (require 'org-habit))

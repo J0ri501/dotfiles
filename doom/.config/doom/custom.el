@@ -4,8 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
 ;; '(elfeed-feeds '("https://www.reddit.com/r/linux.rss"))
- '(org-agenda-files
-   '("~/sdocs/Org/habits.org" "/home/joris/sdocs/Org/agenda2024.org"))
  '(package-selected-packages '(org-superstar)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

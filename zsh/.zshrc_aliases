@@ -31,6 +31,9 @@ alias rnote="flatpak run com.github.flxzt.rnote &> /dev/null & disown"
 alias krita="flatpak run org.kde.krita &> /dev/null & disown"
 alias kicad="flatpak run org.kicad.KiCad &> /dev/null & disown"
 alias telegram="flatpak run org.telegram.desktop &> /dev/null & disown"
+alias obs="flatpak run com.obsproject.Studio &> /dev/null & disown"
+alias hytale="flatpak run com.hypixel.HytaleLauncher &> /dev/null & disown"
 #other programs
 alias zotero="~/apps/zotero/./zotero &> /dev/null & disown"
+alias steam="steam &> /dev/null & disown"
 
