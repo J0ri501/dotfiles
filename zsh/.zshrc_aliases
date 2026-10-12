@@ -33,7 +33,10 @@ alias kicad="flatpak run org.kicad.KiCad &> /dev/null & disown"
 alias telegram="flatpak run org.telegram.desktop &> /dev/null & disown"
 alias obs="flatpak run com.obsproject.Studio &> /dev/null & disown"
 alias hytale="flatpak run com.hypixel.HytaleLauncher &> /dev/null & disown"
+alias zen="flatpak run app.zen_browser.zen &> /dev/null & disown"
 #other programs
 alias zotero="~/apps/zotero/./zotero &> /dev/null & disown"
 alias steam="steam &> /dev/null & disown"
+alias calibre="calibre &> /dev/null & disown"
+alias openw="/home/joris/appimages/OpenWhispr-1.10.2-linux-x86_64.AppImage &> /dev/null & disown"
 
