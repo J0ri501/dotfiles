@@ -97,6 +97,7 @@
         <value type="string" value="wi-fi network connection “infinitum4441” active: infinitum4441 (59%)"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="nm-applet"/>
         <value type="string" value="open-whispr_status_icon_1"/>
         <value type="string" value="CopyQ_copyq"/>
         <value type="string" value="flameshot"/>

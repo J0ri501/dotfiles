@@ -1,0 +1,14 @@
+# Example environment file for Xfce
+
+# Set keyboard layout to English
+XKB_DEFAULT_LAYOUT=
+XCURSOS_THEME=Adawita
+XCURSOR_SIZE=24
+
+#only intel GPU
+WLR_DRM_DEVICES=/dev/dri/card0
+#stable render/cursor
+WLR_RENDERER=gles2
+WLR_NO_HARDWARE_CURSOR=1
+#avoids nvidia propietary EGL(root of error in dmabuf)
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
