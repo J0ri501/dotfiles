@@ -40,3 +40,6 @@ alias steam="steam &> /dev/null & disown"
 alias calibre="calibre &> /dev/null & disown"
 alias openw="/home/joris/appimages/OpenWhispr-1.10.2-linux-x86_64.AppImage &> /dev/null & disown"
 
+
+
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
